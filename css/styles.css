@@ -1,0 +1,13 @@
+.cuerpo {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+}
+h1 {
+    font-size: 50px;
+    color: rgb(173, 16, 10);
+    padding-top: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
