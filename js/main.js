@@ -7,7 +7,8 @@ function solicitarMonto () {
 let plazo = 0
 
 function solicitarPlazo () {
-    plazo = parseInt(prompt("Elige tu plazo en meses"));    
+    plazo = parseInt(prompt("Elige tu plazo en meses")); 
+       
 }
 let inversion = 0
 const inversiones = ["Plazo fijo Uva", "Bonos CER", "Comprar dolares"];
