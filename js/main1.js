@@ -57,7 +57,7 @@ function mostrarCarrito() {
     alert (salida)
 
 }
-//Comienzo del Programa//
+//Comienzo del Programa
 let entrada = prompt("Bienvenido a la calculadora de inversiones, ingrese su nombre o escriba ESC para salir.");
 
 while (entrada.toUpperCase() != "ESC") {

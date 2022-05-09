@@ -1,55 +1,81 @@
-let monto = 0
 
-function solicitarMonto () {
-    monto = parseInt(prompt("Ingresá tu monto a invertir"));    
+const inversiones = [{nombre: "Plazo Fijo UVA", interes: "6% mensual"},
+                {nombre: "Bonos CER", interes: "8% mensual"},
+                {nombre: "Compra Dolares", interes: "10% mensual"}];
+
+const carrito_inversiones = [];
+
+class Producto {
+    constructor (inversion) {
+        this.nombre = inversion.nombre;
+        this.interes = inversion.interes;
+    }
 }
+//Funciones//
 
-let plazo = 0
-
-function solicitarPlazo () {
-    plazo = parseInt(prompt("Elige tu plazo en meses")); 
-       
+function agregarInversion () {
+    let nueva_inversion = new Producto ({nombre:prompt("Ingresá tu monto a invertir"), interes:prompt("Ingresá tu plazo en meses")});
+    carrito_inversiones.push(nueva_inversion);
+    console.log (carrito_inversiones);
 }
-let inversion = 0
-const inversiones = ["Plazo fijo Uva", "Bonos CER", "Comprar dolares"];
-const tasa = [4,6,8];
-function tuProducto () {
-    inversion = parseInt(prompt("Elegi una opción:" + "1- " + inversiones[0] + " 2- " + inversiones[1] + " 3- " + inversiones[2]));
+function mostrarInversiones() {
+    let salida = "";
+    let i = 1;
+
+    for (let inversion of inversiones) {
+        salida += i + "- Inversión: " + inversion.nombre + " - Interés: $" + inversion.interes + "\n";
+        i++;
+    }
+    return salida; 
     
-    if (inversion == 1) {
-        alert ("Felicitaciones elegiste " + inversiones[0] + " tu tasa de interés es " + tasa[0] + " % mensual.")
-    } else if (inversion == 2) {
-        alert ("Felicitaciones elegiste " + inversiones[1] + " y tu tasa de interés es " + tasa[1] + " % mensual.")
-    } else if (inversion == 3) {
-        alert ("Felicitaciones elegiste " + inversiones[2] + " y tu tasa de interés es " + tasa[2] + " % mensual.")
-    } 
+}
+function elegirInversion() {
+    let salir = "";
+
+    while (salir != "NO") {
+        let lista_inversiones = mostrarInversiones();
+        let producto_seleccionado = parseInt(prompt("Ingrese el Número de Opción que desea elegir:\n\n" + lista_inversiones));
+        let producto = inversiones[(producto_seleccionado - 1)];
+        agregarCarrito(producto);
+        console.log("Tu prodcuto ha sido seleccionado!");
+        salir = (prompt("Querés consultar por otra opción? (SI/NO)")).toUpperCase();
+    }
+
+function agregarCarrito(inversion) {
+    let nueva_inversion = new Producto(inversion);
+    carrito_inversiones.push(nueva_inversion);
+
+    }
 
 }
 
+function mostrarCarrito() {
+    let salida = "Prodcutos elegidos:\n\n";
+    let total_productos = 0;
 
+    for (let inversion of carrito_inversiones) {
+        let contenedor = document.createElement ("div");
+        contenedor.innerHTML = `<h3> Tipo de Inversión : ${inversion.nombre}</h3>
+                                <p> Tasa de Interés : ${inversion.interes}</p>`;
+        document.body.appendChild(contenedor);
+        contenedor.className = "container text-danger bg-light"
+    }
 
+}
+//Comienzo del Programa//
 let entrada = prompt("Bienvenido a la calculadora de inversiones, ingrese su nombre o escriba ESC para salir.");
 
 while (entrada.toUpperCase() != "ESC") {
-    alert ("Hola! " + entrada)
+    alert ("Hola! " + entrada + " vamos a comenzar!")
 
+agregarInversion ();
 
-tuProducto ();
-solicitarMonto ();
-solicitarPlazo ();
+mostrarInversiones ();
+elegirInversion ();
 
-if (monto < 1000) {
-    alert ("Mejor gastalo en un vino")
-} else if ((monto >= 1000) && (monto <=20000)) {
-    alert ("Hacé un plazo fijo UVA")
-} else if (monto >= 20001) {
-    alert ("Comprá dolares")
-}
+mostrarCarrito ();
 
 if (entrada.toUpperCase() == "ESC");
     break;
 
 }
-
-
-
