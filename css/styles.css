@@ -11,3 +11,17 @@
     padding-top: 10px;
     padding-left: 20px;
 }
+.formularioTitulo{
+    margin-top: 5px;
+}
+.formularioTitulo h3 {
+    font-size: 40px;
+    color: bisque;
+}
+.info-usuario {
+    font-size: 30px;
+    color: brown;
+    display: flex;
+    justify-content: center;
+
+}
