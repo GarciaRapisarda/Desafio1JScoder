@@ -25,3 +25,8 @@
     justify-content: center;
 
 }
+.card:hover {
+    transform: scale(0.98); 
+    transition: 2s;   
+    box-shadow: 20px 20px 10px  brown;
+}
