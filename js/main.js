@@ -7,10 +7,32 @@ class Usuario {
 
     }
 }
+
+let campo_nombre = document.getElementById("name");
+campo_nombre.addEventListener("keyup", eventoKey);
+
+function eventoKey() {
+    let alertaCampo = `<img src="images/cruz.svg"><p>Ingresá un Nombre válido</p>`;
+    if (campo_nombre.value.length <= 2) {
+        document.getElementById("form").innerHTML = alertaCampo
+    } else {
+        document.getElementById("form").innerHTML = ""
+    }
+}
+
+let campo_monto = document.getElementById("amount");
+campo_monto.addEventListener("keyup", eventoKey1);
+
+function eventoKey1 () {
+    let alertaCampo1 =  `<img src="images/cruz.svg"><p>Ingresá un Monto válido</p>`;
+    (campo_monto.value < 1000) ? document.getElementById("form1").innerHTML = alertaCampo1 : document.getElementById("form1").innerHTML = ""   
+}
+
+
 let boton = document.getElementById("calcular");
 boton.addEventListener("click", cargarUsuario);
 
-function cargarUsuario() {
+function cargarUsuario () {
     let nombre = document.getElementById("name").value;
     let tipo = document.getElementById("type").value;
     let monto = document.getElementById("amount").value;
@@ -18,7 +40,9 @@ function cargarUsuario() {
     let usuario1 = new Usuario(nombre, tipo, monto, tiempo);
     console.log(usuario1);
     mostrarUsuario(usuario1);
+
 }
+
 
 function mostrarUsuario(usuario) {
     let formulario = document.getElementById("user");

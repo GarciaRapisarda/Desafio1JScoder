@@ -30,3 +30,11 @@
     transition: 2s;   
     box-shadow: 20px 20px 10px  brown;
 }
+.mensaje {
+    display: flex;
+    justify-content: center;    
+}
+.mensaje p {
+    color: brown;
+    padding-left: 10px;
+}
