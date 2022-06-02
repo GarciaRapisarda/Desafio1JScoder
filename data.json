@@ -1,0 +1,6 @@
+[
+    {"divisa": "Dolar", "cotizacion": "USD 200", "id": 1},
+    {"divisa": "Euro", "cotizacion": "EUR 300", "id": 2},
+    {"divisa": "Bitcoin", "cotizacion": "BTC 31260", "id": 3}
+
+]
