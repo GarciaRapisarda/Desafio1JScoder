@@ -1,6 +1,6 @@
 [
-    {"divisa": "Dolar", "cotizacion": "USD 200", "id": 1},
-    {"divisa": "Euro", "cotizacion": "EUR 300", "id": 2},
-    {"divisa": "Bitcoin", "cotizacion": "BTC 31260", "id": 3}
+    {"sector": "TECNOLOGÍA", "noticia": "Google pagará a más de 300 medios de comunicación de la UE para publicar contenido.", "fuente": "Bloomberg"},
+    {"sector": "MATERIAS PRIMAS", "noticia": "Los precios del petróleo avanzan a pesar del aumento de los inventarios de EE. UU.", "fuente": "Reuters"},
+    {"sector": "FED", "noticia": "Menos empresas que se esfuerzan por obtener ayuda podrían estar bien por Jay Powell: Morning Brief.", "fuente": "Yahoo Finance"}
 
 ]
