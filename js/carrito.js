@@ -49,7 +49,7 @@ btn.addEventListener('click', () => {
 
 function actualizarBotonCarrito() {
     let inversion_carrito = cargarInversionesCarrito();
-    let contenido =`<button type="button" class="btn position-relative"><img width="25" src="images\cart.svg" alt="cart"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">${inversion_carrito.length}</span></button>`;
+    let contenido =`<button type="button" class="btn position-relative"><img width="25" src="images/cart.svg" alt="cart"><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">${inversion_carrito.length}</span></button>`;
     document.getElementById("boton_carrito").innerHTML = contenido;
 }
 
