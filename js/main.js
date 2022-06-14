@@ -50,6 +50,8 @@ function cargarUsuario () {
     console.log(usuario1);
     mostrarUsuario(usuario1);
 
+let datos_formulario = {usuario_nombre:nombre, usuario_correo:correo, usuario_telefono:telefono};
+localStorage.setItem("datos_formulario", JSON.stringify(datos_formulario));
 }
 
 function mostrarUsuario(usuario) {
@@ -61,5 +63,5 @@ function mostrarUsuario(usuario) {
 
     nuevoContenido.className = "info-usuario";
     formulario.appendChild(nuevoContenido);
-}
 
+}

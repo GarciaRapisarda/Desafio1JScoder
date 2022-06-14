@@ -27,4 +27,5 @@ guardarInversionesLS(inversiones);
 cargarInversiones();
 actualizarBotonCarrito();
 
+
 document.getElementById("vaciar_carrito").addEventListener("click", eliminarCarrito);
