@@ -6,6 +6,7 @@ function guardarInversionesLS(inversiones) {
     localStorage.setItem("inversiones", JSON.stringify(inversiones));
 }
 
+
 function cargarInversionesLS() {
     return JSON.parse(localStorage.getItem("inversiones"));
 
